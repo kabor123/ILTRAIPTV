@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!--=========== AJAX ===============-->
+        <script src="jquery-3.6.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <!--========== BOX ICONS ==========-->
+        <script src="https://kit.fontawesome.com/4adbf782c7.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="assets/img/icon.png" type="image/x-icon">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>IltraIPTV</title>
+    </head>
+    <body>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+           
+            <nav class="nav bd-container">
+
+                <a href="#" style=" margin: -15px; margin-left: -60px;" class="nav__logo"><img src="assets/img/logo.png" style="width: 100px;" alt=""></a>
+                
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+
+                        
+                    </ul>
+                </div>
+                <div class="nav-btn">
+                    <a class="trail" href="#services"><li class="fa fa-fire"></li>  24'hr Trail</a>
+                    
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            
+            
+            
+            <!--========== HOME ==========-->
+            <article id="fetch" class="fetch">
+               
+               
+                <div id="messages" class="messages">
+                    <span id="close" onclick="this.parentNode.parentNode.remove();"><i class="fa fa-close"></i></span>
+                    
+                
+                </div>
+            </article>
+            
+            <section class="home" id="home">
+                
+                
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__data">
+                        <h1 class="home__title"><span style="color: #f56f37;">IltraIPTV</span> Pick the best Iptv Service.</h1>
+                        <h2 class="home__subtitle">Welcome to IltraIPTV: Your Gateway to Limitless Entertainment! Explore a vast library of over 120,000 movies & TV shows, indulge in HD/FHD quality, and access +25,000 channels. With an additional +40,000 VOD options.</h2>
+                        <div class="box-data">
+                            <div  id="box" class="box">
+                               <a> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nO2Uvy8EURDHvxIRIaKSUBDREH+AViniR+XN3CHR6bidWRdRrcqR8AcoFRLkCqHRqCR0aolLNOfaSxSiuEN29wXJXmHXCsVNMsmbnTffTybzdoCm/R8zXhtYdkBaAetbIid5BOl2oBUxP5FUmCOgQiNAJT2AVqKAtMTZ+rcAJEcgubRxFST7ICmB9cWefT8Hay0JoIYlrx0kG2EsF/beDUhuw4eRG8ZsvgukE2B9jQu4s7M5tPEugBawPIH1IMxJCaSntv46LqAYfF9w+jDvDMGsd4Nzg7abPBbdTpDUwXJl689iAmQT414rWI/BegKzOgByZsKcOwkjY3ZOe0FnpA/xABl3DsYdtSJ1TC93fM5D+5FxpwK4WemB0Wz8IWd1BKxs4/sv86h+1Ji1XpA4YH1O9kz5t/8DThPgL6r0AOVGgEKKgK0owF+xPuRnnZQD8Ybruml/Ze9sZf1IkW9nGAAAAABJRU5ErkJggg=="></a>
+                                <div class="content">
+                                    <h1>HD/fHD</h1>
+                                    <h2>+25k</h2>
+                                </div>
+                            </div> 
+                            <div id="box" class="box">
+                               <a> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADdElEQVR4nO1bXYhNURT+ZowRk/yUJw9+Uh6EInnBjPIgJiJ77+vORFETxjR3rY0RD0d5IEoS3pQXkXjxoMZPlxcvXjAYJT/jQajxMEMeMKN9zjZ3cu8dd3DO2e49X606nVN7rfXttdde++cACf4SQoyBoPmQmVWRitFpdMeKFLdC0nsoHoxFjG5jQyyQdHyYMT2QdBuKb0Yiga6eHBF8LFrnU3opFA9A0VcoSiMuSG4KbOABSL0kQsV02obgieiUFrXlZBAJdCpCpdxpw68RccPYEAyDzuiUSsoGBOgGxA1jQxCN2eiUyoSAbBIBKhkCg0kOUEkSbEDccGoWSOm1kHQjvDK4QLHjFAGKz4S7AKI+tLSMdZcAQeP9d2EtgdN6Rp4tThEQBxICdBIBcGYIiErPASrsWYD73Z4FJK0JtQ4wmx+/wikC4kBCgE4iAMkQYEdygMhsheLnkPwiFFF8DUCVuzlA0pFwT4L4Leq9GncJAKr8YiWdmR2KNOu6PFscIyB6JAToJAKQDAFOcgDKNgnWezUQelbRmUHw5nIdAlVQfBiSvpR4W6TMCJC0xTr3DYpeFqkM+4cVSftCsyUWAhRf8XWIzI6C36VeAcWfbe+fzSuRyyACskV1+Fd0qM/2/nl4XnVodjhHgKSFUNxrnb8cz1U5GRMBon0uJL+zYX81b2FU1gQImuOvBgPnr2N127jQdJdsnKSViIIA1T4Tkt644byBCT8/Q/M2hE4yN9kpzzh/yz97iB2S26xBD0PrjVyUfbInw3cL7gfEgmZdB0mvbSZ+BEXb//kpkOIHwyq9e1i3dyKcQiozD5JfhXwSZIbAfYiOSXASzboOinbbqu1PTnt+OlrkJIgvQNBUlC2UJaBioRICBis3AoRenEt0mUWoGAia7s/p+Rn/jv+trNHYMgGKnliHP0DRuUDMsz/lPXaj0gsLitk6+hSibdrQe/MsqdsSw/jvkN4/BZI0FHWMKENO6o15baT0Jlv6dpfQjsb69slwBiluHVV1l9qzIK+NYKNjFG3E9btcIZjeUHwQko+OKIq6rAM789qQtMsuerp+3w4fcCsCSoUJ/YCAXghelnufWQ5JH4OepQ0oW3heNSRdsmP9u80Jz4J/EH1iLka/wRk1zP6BokO5db69/yfZg/BqUTEQXq2fDI1UlONwCz8AvzfoVhFGU1kAAAAASUVORK5CYII="></a>
+                                <div class="content">
+                                    <h1>Panel</h1>
+                                    <h2>M3U/MAG</h2>
+                                </div>
+                            </div> 
+                            <div id="box" class="box">
+                               <a> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAY0lEQVR4nGNgGAVEg7BCL4awwscM4UX/KcJhIDOKPbFZQLnh4XBLHmFaAJNE54cTiXGZQ38LwqmEB84CGBiNAwwwGgcwMPDJNHw0HxThCCLaF9fFnmAJahgeUeiBacEoYMAOAPQCRJNlzlW+AAAAAElFTkSuQmCC"></a>
+                                <div class="content">
+                                    <h1>Vod</h1>
+                                    <h2>+40,000</h2>
+                                </div>
+                                
+                            </div>
+                            <div class="box">
+                               <a href="#services"> <button id="btn" class="btn">Subscribe!</button></a>
+                             </div>
+                            </div>
+                            <ul class="check">
+                                <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAACuElEQVRIia2VTUgVYRSGnzNjaQVFRBSkQVBg3Ws7uw4FXSqQKNq1aNGin00G/WFEraJVYLSoRUGB0qIW/ZAWRCAYlo11F1H3zg2pQNKksEhJK+36nTZef+bO6Gi9q49z3nOecz6Yb4SoWr29mJLv+wXZB6BoPQMl9XQ++R2lXCJBYs4eEeqAFb7qHoWTpN2b/wZam1gjtnUZqJ6mT6saq4ZsmzczUKxyuSX2aUUOAXOmgeQ1LHDFaO48XupzOCheWYba1ZYlm1TZDcyPCPDrpwi3jdFnyMhjMqmuSSCJOx6wbpbNgyV4mnbjANaE8Lz/CgFQivPHiaCCe40igQuK1AKDAekv+UNRUDCylKfGc08BRuNOn8B1n2Fs+LGNRPg0Q8ygiuwDDCCi7PEbBOkuABnkzUwoip4k8/wDABXOYYStfo8ReV0AwvAqqKEIt1StLQg9E8LNZNqvAhBzVotyPnAaMQGghZoBhn3WDlNeuhevrUVzJjkK61e1DwAKWCI0AAsCMEP8XDz2UoyDXPcX0OozryLbvQ2Aty/eac4kVeUg3rOPAMSdE8DG4G1o4f2joUIQoEKjzz5XhCbizs48DO/5HQAqnHKBc4EQQFUn9bImZ3ONwEgBDG4Tc8Yf1mSySJQbhH/kOf7YTeGgTKoL9H5AYYkI98dg34bOAJVh2wjco6Otxxfzaf3GKjHGDZ0UUkBVYO2oVEnguS+nBgESdx4CO8IaTaMHmnF3+YNWkFPVrgEGZgEZVGvkaFDCDrT3fuxn6cp+kZltpcIR0i+ao4MAertS1rKypcCGKBARvabp9rNh+cCry8ssKT4G3Juewh1TXnZoKkv4RgCdnYbNzl3r64/FQCKYoZc0036QbNZMPUtUxZ39AheBRaORPhU9Trq9IUp5dBDA+kSpZaQOwNhSy2s38j/sL3PN71YLzQnlAAAAAElFTkSuQmCC"> 30-Days Money Back Guarantee</li>
+                                <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAACuElEQVRIia2VTUgVYRSGnzNjaQVFRBSkQVBg3Ws7uw4FXSqQKNq1aNGin00G/WFEraJVYLSoRUGB0qIW/ZAWRCAYlo11F1H3zg2pQNKksEhJK+36nTZef+bO6Gi9q49z3nOecz6Yb4SoWr29mJLv+wXZB6BoPQMl9XQ++R2lXCJBYs4eEeqAFb7qHoWTpN2b/wZam1gjtnUZqJ6mT6saq4ZsmzczUKxyuSX2aUUOAXOmgeQ1LHDFaO48XupzOCheWYba1ZYlm1TZDcyPCPDrpwi3jdFnyMhjMqmuSSCJOx6wbpbNgyV4mnbjANaE8Lz/CgFQivPHiaCCe40igQuK1AKDAekv+UNRUDCylKfGc08BRuNOn8B1n2Fs+LGNRPg0Q8ygiuwDDCCi7PEbBOkuABnkzUwoip4k8/wDABXOYYStfo8ReV0AwvAqqKEIt1StLQg9E8LNZNqvAhBzVotyPnAaMQGghZoBhn3WDlNeuhevrUVzJjkK61e1DwAKWCI0AAsCMEP8XDz2UoyDXPcX0OozryLbvQ2Aty/eac4kVeUg3rOPAMSdE8DG4G1o4f2joUIQoEKjzz5XhCbizs48DO/5HQAqnHKBc4EQQFUn9bImZ3ONwEgBDG4Tc8Yf1mSySJQbhH/kOf7YTeGgTKoL9H5AYYkI98dg34bOAJVh2wjco6Otxxfzaf3GKjHGDZ0UUkBVYO2oVEnguS+nBgESdx4CO8IaTaMHmnF3+YNWkFPVrgEGZgEZVGvkaFDCDrT3fuxn6cp+kZltpcIR0i+ao4MAertS1rKypcCGKBARvabp9rNh+cCry8ssKT4G3Juewh1TXnZoKkv4RgCdnYbNzl3r64/FQCKYoZc0036QbNZMPUtUxZ39AheBRaORPhU9Trq9IUp5dBDA+kSpZaQOwNhSy2s38j/sL3PN71YLzQnlAAAAAElFTkSuQmCC"> 24/7 VIP Support</li>
+                            </ul>
+                        
+                    </div>
+                    
+    
+                    <img src="assets/img/home.webp" alt="" class="home__img">
+                </div>
+                <div class="tv-clubs">
+                    <ul class="tv-clubs-list">
+                        <img src="assets/img/one.png" alt="">
+                        <img src="assets/img/two.png" alt="">
+                        <img src="assets/img/three.png" alt="">
+                        <img src="assets/img/four.png" alt="">
+                        <img src="assets/img/five.png" alt="">
+                    </ul>
+                </div>
+            </section>
+             
+            <!--========== ABOUT ========== -->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">About us</span>
+                        <h2 class="section-title about__initial">IPTV Bliss: Unleash Limitless Entertainment!</h2>
+                        <p class="about__description">Discover limitless entertainment at IltraIPTV. Stream your favorite channels, movies, and sports anytime, anywhere. Experience high-quality streaming and a user-friendly interface. Join us today and elevate your television viewing like never before.</p>
+                        
+                    </div>
+
+                    <img src="assets/img/about.png" alt="" class="about__img">
+                </div>
+            </section>
+
+            <!---===========Adition page ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid" id="adition">
+                    <div class="about__data" style="order: 1;">
+                        <h2 class="section-title about__initial">Ultimate Streaming Bliss: IltraIPTV Unleashed!</h2>
+                        <p class="about__description">Experience streaming perfection with IltraIptv's high-performance UK-Based server. Enjoy instant channel access 0.5s and indulge in breathtaking 4K and Full HD quality. Elevate your entertainment to new heights.</p>
+                        <a href="#services" class="button"></i> Start Now!</a>
+                    </div>
+
+                    <img style="order: 2;" src="assets/img/other.png" alt="" class="about__img">
+                </div>
+            </section>
+
+            <!---===========Adition page ==========-->
+            <section class="about section bd-container" id="services">
+                <div class="Plans-Title">
+                    <h1>Best <span style="color: #c74314;">IPTV</span> Only For You</h1>
+                    <p>Cost-Effective,Full Service,High Security</p>
+                </div>
+                <div class="pricing-table">
+                    <div class="pricing-plan">
+                      <div class="plan-header">
+                          <div class="plan">
+                        <img src="data:image/png;base64,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">
+                        <h3>Basic<br><span style="white-space: nowrap;"> 24 <span style="color: grey; font-size: 0.8em;" >Hour Trail</span></span></h3>
+                        </div>
+                          <div class="price" style="color: rgb(224, 113, 48);">Free</div> 
+                    
+                      </div>
+                      <hr class="separator">
+                      <ul>
+                        <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                            style="fill:#000000;">
+                            <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                            </svg> </span> Over 120.000 Movies & Tv Shows</li>
+
+                            <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                style="fill:#000000;">
+                                <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                </svg> </span> HD FHD +25K Channels
+
+                            </li>
+
+                                <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                    style="fill:#000000;">
+                                    <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                    </svg> </span> +40.000 VOD</li>
+
+                                    <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                        style="fill:#000000;">
+                                        <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                        </svg> </span> Without Freezing</li>
+
+                                        <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                            style="fill:#000000;">
+                                            <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                            </svg> </span> M3U MAG Enigma2</li>
+
+                                            <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                                style="fill:#000000;">
+                                                <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                                </svg> </span> 27/7 Support</li>
+                      </ul>
+                      <hr class="separator">
+                      <a href="https://wa.me/212628844468" class="btn12">Watch Now!</a>
+                    </div>
+                    <div class="pricing-plan" style="background-color: rgb(42, 46, 48);">
+                      <div class="plan-header">
+                          <div class="plan">
+                        <img src="data:image/png;base64,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">
+                          <h3 style="color: white; font-weight: bold; ">Premium<br> 12 <span style="font-size: 0.8em; color: grey;" >Month's</span></h3>
+                        </div>
+                          <div class="price" style="color: #FCC419;">$50</div> 
+                      </div>
+                      <hr class="separator" style="border-top: 1px solid rgb(47, 56, 58);">
+                      <ul>
+                        <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                            style="fill:#000000;">
+                            <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                            </svg> </span> Over 120.000 Movies & Tv Shows</li>
+
+                            <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                style="fill:#000000;">
+                                <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                </svg> </span> HD FHD +25K Channels
+
+                            </li>
+
+                                <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                    style="fill:#000000;">
+                                    <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                    </svg> </span> +40.000 VOD</li>
+
+                                    <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                        style="fill:#000000;">
+                                        <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                        </svg> </span> Without Freezing</li>
+
+                                        <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                            style="fill:#000000;">
+                                            <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                            </svg> </span> M3U MAG Enigma2</li>
+
+                                            <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                                style="fill:#000000;">
+                                                <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                                </svg> </span> 27/7 Support</li>
+                        
+                      </ul>
+                      <hr class="separator" style="border-top: 1px solid rgb(47, 56, 58);">
+                      <a href="https://wa.me/212628844468" class="btn12" style="background-color: #c74314; color: white;">Watch Now!</a>
+                    </div>
+                    <div class="pricing-plan">
+                      <div class="plan-header">
+                          <div class="plan">
+                        <img src="data:image/png;base64,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">
+                        <h3>Standard<br> 06 <span style="color: grey; font-size: 0.8em;" >Month's</span></h3>
+                        </div>
+                         <div class="price" style="color: rgb(94, 58, 221);" >$30</div> 
+                      </div>
+                      <hr class="separator">
+                      <ul>
+                        <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                            style="fill:#000000;">
+                            <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                            </svg> </span> Over 120.000 Movies & Tv Shows</li>
+
+                            <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                style="fill:#000000;">
+                                <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                </svg> </span> HD FHD +25K Channels
+
+                            </li>
+
+                                <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                    style="fill:#000000;">
+                                    <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                    </svg> </span> +40.000 VOD</li>
+
+                                    <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                        style="fill:#000000;">
+                                        <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                        </svg> </span> Without Freezing</li>
+
+                                        <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                            style="fill:#000000;">
+                                            <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                            </svg> </span> M3U MAG Enigma2</li>
+
+                                            <li><span><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                                                style="fill:#000000;">
+                                                <g fill="#ea5c20" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12zM21.707,12.707l-7.56,7.56c-0.188,0.188 -0.442,0.293 -0.707,0.293c-0.265,0 -0.52,-0.105 -0.707,-0.293l-3.453,-3.453c-0.391,-0.391 -0.391,-1.023 0,-1.414c0.391,-0.391 1.023,-0.391 1.414,0l2.746,2.746l6.853,-6.853c0.391,-0.391 1.023,-0.391 1.414,0c0.391,0.391 0.391,1.023 0,1.414z"></path></g></g>
+                                                </svg> </span> 27/7 Support</li>
+                      </ul>
+                      <hr class="separator">
+                      <a href="https://wa.me/212628844468" class="btn12">Watch Now!</a>
+                    </div>
+                  </div>
+            </section>
+
+
+                      
+
+            <!---=============== reviwes ================-->
+
+            <section class="contact section bd-container" >
+                
+
+                  <div class="about__container  bd-grid" id="adition">
+                    <div class="about__data" style="order: 2;">
+                        <h2 style="font-size: 2rem; color: #005772;">Discover What Our customer Are Saying!</h2>
+                        
+                        <div class="slider">
+                            <div class="slider-container">
+                              <div class="testimonial" >
+                                <p>I have been using Iltraiptv for the past six months, and I must say it's the best IPTV service I've ever tried. The channel selection is extensive, the streaming quality is top-notch, and the customer support is excellent. I highly recommend Iltraiptv to anyone looking for a reliable and affordable IPTV service.                                </p>
+                                <div class="profile">
+                                    <img style="width: 80px; height: 80px;" src="assets/img/kabor.png" alt="">
+                                    <div class="user-text">
+                                        <h1>Kabor <br><span>Khlq</span> </h1>
+                                        <p>⭐️⭐️⭐️⭐️</p>
+
+                                    </div>
+                                    
+                                </div>
+                              </div>
+
+                              <div class="testimonial" >
+                                <p>Iltraiptv has completely transformed my TV viewing experience. The picture and sound quality are exceptional, and I love the variety of channels and on-demand content available. It's incredibly easy to set up, and the interface is user-friendly. I'm extremely satisfied with Iltraiptv and would give it a five-star rating without hesitation.</p>
+                                <div class="profile">
+                                    <img style="width: 80px; height: 80px; border-radius: 100px;" src="assets/img/user1.png" alt="">
+                                    <div class="user-text">
+                                        <h1>Mohamed <br><span>Sokrate</span> </h1>
+                                        <p>⭐️⭐️⭐️⭐️</p>
+
+                                    </div>
+                                    
+                                </div>
+                              </div>
+
+                              <div class="testimonial" >
+                                <p>As a sports enthusiast, I rely heavily on a good IPTV service to watch live matches. Iltraiptv has been my go-to choice, and it hasn't disappointed me. The sports channels are crystal clear, and there's no lag or buffering issues during the games. I appreciate the reliable service and prompt customer support whenever I've had questions. Iltraiptv gets a thumbs up from me!                                </p>
+                                <div class="profile">
+                                   <img style="width: 80px; height: 80px;" src="assets/img/user2.png" alt="">
+                                    <div class="user-text">
+                                        <h1>Achraf <br><span>Winners</span> </h1>
+                                        <p>⭐️⭐️⭐️⭐️</p>
+
+                                    </div>
+                                    
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                          </div>
+                          
+                          
+                    </div>
+
+                    <img style="order: 1;" src="assets/img/user.png" alt="" class="about__img">
+                </div>
+
+                  
+
+                        
+                         
+
+                    
+            </section>
+            <section class="contact section bd-container">
+                <div class="container">
+                    <h2 class="faq">Frequently Asked Questions</h2>
+                    <div class="accordion">
+                      <div class="accordion-item">
+                        <button id="accordion-button-1" aria-expanded="false">
+                          <span class="accordion-title">What payment methods do you accept?</span>
+                          <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                          <p>
+                            We accept various payment methods, including credit cards, debit cards, PayPal, Payoneer and other secure online payment options. You can choose the payment method that is most convenient for you during the checkout process.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button id="accordion-button-2" aria-expanded="false">
+                          <span class="accordion-title">Do I need any special equipment for IPTV?</span>
+                          <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                          <p>
+                            No, you do not need any special equipment for IPTV. You can access our IPTV service using a variety of devices, such as smart TVs, computers, smartphones, tablets, and media streaming devices like Amazon Fire TV or Roku.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button id="accordion-button-3" aria-expanded="false">
+                          <span class="accordion-title">What channels are included in your IPTV service?</span>
+                          <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                          <p>
+                            Our IPTV service offers a wide range of channels, including popular international channels, sports channels, movies, TV shows, documentaries, and more. We regularly update our channel list to provide the best viewing experience.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button id="accordion-button-4" aria-expanded="false">
+                          <span class="accordion-title">What internet speed is required for IPTV?</span>
+                          <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                          <p>
+                            We recommend a stable internet connection with a minimum speed of 10 Mbps for a smooth IPTV viewing experience. Higher speeds are preferable for HD or 4K content.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button id="accordion-button-5" aria-expanded="false">
+                          <span class="accordion-title">How do I set up IPTV on my device?</span>
+                          <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                          <p>
+                            The setup process may vary depending on the device you are using. We provide detailed setup instructions and support to help you get started. Please refer to our setup guides or contact our customer support for assistance.
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </section>
+                <!---=============== Contact ================-->
+                <section class="contact section bd-container" id="contact">
+            <div class="contact__container  bd-grid">
+                <div class="contact__data">
+                    <h1 style="color: white;"><span style="color: #f56f3f;">Need help?</span>  Call our award-winning support team 24/7: Chat online</h1>
+                    <p style="color: rgb(209, 209, 209);">Dont miss any Information! Subscribe Now.</p>
+                </div>
+                   
+                <div class="wrapper">
+                    
+                    <a href="https://wa.me/212628844468" for="click"><Button class="btn-12" ><li class="fa fa-whatsapp" style="font-weight: 700;"></li>  Whatsapp Us!</Button> </a>
+                    
+                 </div>
+
+                
+            </div>
+            </section>
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo"><img src="assets/img/logobar.png" style="width: 200px;" alt=""></a>
+                    <span class="footer__description"></span>
+                    
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About Us</a></li>
+                        <li><a href="#services" class="footer__link">Our Plans</a></li>
+                        
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        
+                        <li><a href="#contact" class="footer__link">Contact us</a></li>
+                        <li><a href="Privacy-policy.txt" class="footer__link">Privacy policy</a></li>
+                        <li><a href="Terms-Of-Service.txt" class="footer__link">Terms of services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Adress</h3>
+                    <ul>
+                        <li>MOROCCO</li>
+                        <li>+212628844468</li>
+                        <li>IltraIPTV@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2023 IltraIPTV. All right reserved</p>
+        </footer> 
+    
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+       
+        <script src="assets/js/ajax.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/faq.js"></script>
+
+        <script>
+            const slider = document.querySelector('.slider-container');
+const testimonials = document.querySelectorAll('.testimonial');
+
+let currentIndex = 0;
+const slideWidth = testimonials[0].clientWidth;
+const slideInterval = 8000; // Interval between slides (in milliseconds)
+
+setInterval(nextSlide, slideInterval);
+
+function nextSlide() {
+  currentIndex++;
+  if (currentIndex >= testimonials.length) {
+    currentIndex = 0;
+  }
+  slider.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+}
+
+
+                              </script>
+
+    </body>
+</html>
